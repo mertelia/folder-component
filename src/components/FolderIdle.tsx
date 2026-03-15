@@ -14,6 +14,7 @@ const FolderIdle = ({ folderPosition, onOpen }: Props) => {
   const ySpring = useSpring(y);
   const rotateX = useTransform(ySpring, [-0.5, 0.5], [10, -10]);
   const rotateY = useTransform(xSpring, [-0.5, 0.5], [-10, 10]);
+  const exitY = typeof window !== "undefined" ? window.innerHeight * 0.4 : 350;
 
   return (
     <div
@@ -34,7 +35,7 @@ const FolderIdle = ({ folderPosition, onOpen }: Props) => {
         variants={{
           idle: { y: 0, scale: 1 },
           hover: { scale: 1.5 },
-          exit: { y: 350, scale: 1 },
+          exit: { y: exitY, scale: 1 },
         }}
         transition={{ ease: "easeInOut", duration: 0.3 }}
         onClick={onOpen}

@@ -12,7 +12,7 @@ const Folder = () => {
   const [selectedCard, setSelectedCard] = useState(0);
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-black overflow-hidden font-sans">
+    <div className="w-screen  h-screen flex justify-center items-center bg-black overflow-hidden font-sans">
       <AnimatePresence mode="popLayout">
         {(folderPosition === "idle" || folderPosition === "cards") && (
           <FolderIdle
@@ -30,6 +30,7 @@ const Folder = () => {
               setSelectedCard(i);
               setFolderPosition("focused");
             }}
+            onBack={() => setFolderPosition("idle")}
           />
         )}
         {folderPosition === "focused" && (
