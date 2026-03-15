@@ -8,7 +8,7 @@ type Props = {
 };
 
 const CardGrid = ({ onCardClick, onBack }: Props) => (
-  <div className="absolute left-1/2 -translate-x-1/2 top-0 sm:top-1/2 sm:-translate-y-1/2 w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-10 py-8 sm:py-0 z-100">
+  <div className="absolute left-1/2 -translate-x-1/2 top-0 sm:top-1/2 sm:-translate-y-1/2 w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 grid-rows-[1fr_1fr_auto] sm:grid-rows-none h-dvh sm:h-auto py-8 sm:py-0 px-4 sm:px-10 gap-4 sm:gap-8 z-100">
     {cardData.map((card, i) => {
       const IconComponent = card.logo;
       return (
@@ -27,7 +27,7 @@ const CardGrid = ({ onCardClick, onBack }: Props) => (
             scale: 0.92,
             transition: { duration: 0.25, delay: 0 },
           }}
-          className="bg-[#dfeaf9] rounded-2xl w-full h-40 sm:h-64 p-5 sm:p-8 cursor-pointer shadow-2xl flex flex-col gap-3 sm:gap-4 will-change-transform"
+          className="bg-[#dfeaf9] rounded-2xl w-full h-full sm:h-64 p-5 sm:p-8 cursor-pointer shadow-2xl flex flex-col gap-3 sm:gap-4 will-change-transform"
           whileHover={{
             scale: 1.05,
             transition: { ease: "easeInOut", duration: 0.25 },
