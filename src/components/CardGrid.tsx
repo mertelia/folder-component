@@ -8,7 +8,7 @@ type Props = {
 };
 
 const CardGrid = ({ onCardClick, onBack }: Props) => (
-  <div className="absolute left-1/2 -translate-x-1/2 max-sm:top-0 max-sm:py-8 sm:top-1/2 sm:-translate-y-1/2 w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-10 overflow-y-auto max-h-dvh z-100">
+  <div className="absolute left-1/2 -translate-x-1/2 top-0 sm:top-1/2 sm:-translate-y-1/2 w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-10 py-8 sm:py-0 z-100">
     {cardData.map((card, i) => {
       const IconComponent = card.logo;
       return (
