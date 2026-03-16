@@ -9,26 +9,25 @@ export const cardData = [
   {
     id: 0,
     title: "Project Card",
-    content: "Project Card that explains upcoming projects.",
+    content: "A card that explains upcoming projects.",
     logo: ScrollText,
   },
   {
     id: 1,
-    title: "Discussion card",
-    content: "Explains the points that developers have different views.",
+    title: "Discussion Card",
+    content: "Topics where developers share different opinions.",
     logo: MessagesSquare,
   },
   {
     id: 2,
     title: "Idea Card",
-    content:
-      "Cool ideas that comes from the developers that they want to show us.",
+    content: "Cool ideas from developers that they want to share with us.",
     logo: Lightbulb,
   },
   {
     id: 3,
     title: "Management Card",
-    content: "Work Groups for the projects.",
+    content: "Workgroups organized for projects.",
     logo: SquareChartGantt,
   },
 ];
