@@ -41,7 +41,7 @@ const FocusedView = ({ selectedCard, onBack }: Props) => {
   return (
     <motion.div
       ref={containerRef}
-      className="w-screen h-dvh flex flex-nowrap items-center p-4 gap-4 overflow-x-scroll overflow-y-hidden snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="w-screen h-dvh flex flex-nowrap items-center p-4 gap-4 overflow-x-scroll overflow-y-hidden snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden z-100"
     >
       {cardData.map((card, i) => {
         const IconComponent = card.logo;
