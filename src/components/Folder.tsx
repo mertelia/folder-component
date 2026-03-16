@@ -12,7 +12,15 @@ const Folder = () => {
   const [selectedCard, setSelectedCard] = useState(0);
 
   return (
-    <div className="w-screen  h-screen flex justify-center items-center bg-black overflow-hidden font-sans ">
+    <div className="w-screen  h-screen flex justify-center items-center bg-black overflow-hidden font-sans">
+      {/* ORIGINAL CONTENT FROM: */}
+      <a
+        href="https://www.are.na/block/44193495"
+        className="fixed top-5 left-center text-gray-500 underline text-xs z-999"
+        target="_blank"
+      >
+        Original content uploaded by Alexandre Gellard
+      </a>
       <AnimatePresence mode="popLayout">
         {(folderPosition === "idle" || folderPosition === "cards") && (
           <FolderIdle
