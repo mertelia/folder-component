@@ -1,6 +1,7 @@
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { ChevronRight, Paperclip } from "lucide-react";
 import { cardConfigs, cardData } from "./Data";
+import { useMediaQuery } from "react-responsive";
 
 type Props = {
   folderPosition: "idle" | "cards";
@@ -15,6 +16,7 @@ const FolderIdle = ({ folderPosition, onOpen }: Props) => {
   const rotateX = useTransform(ySpring, [-0.5, 0.5], [10, -10]);
   const rotateY = useTransform(xSpring, [-0.5, 0.5], [-10, 10]);
   const exitY = typeof window !== "undefined" ? window.innerHeight * 0.4 : 350;
+  const isMobile = useMediaQuery({ maxWidth: 639 });
 
   return (
     <div
@@ -35,7 +37,7 @@ const FolderIdle = ({ folderPosition, onOpen }: Props) => {
         variants={{
           idle: { y: 0, scale: 1 },
           hover: { scale: 1.5 },
-          exit: { y: exitY, scale: 1 },
+          exit: { y: exitY, scale: 1, opacity: isMobile ? 0 : 1 },
         }}
         transition={{ ease: "easeInOut", duration: 0.3 }}
         onClick={onOpen}
