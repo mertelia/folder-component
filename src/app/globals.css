@@ -1,4 +1,7 @@
 @import "tailwindcss";
+body {
+  background: black;
+}
 @font-face {
   font-family: "Diatype";
   src: url("/fonts/ABCDiatypeRoundedVariable-Trial.ttf") format("truetype");
